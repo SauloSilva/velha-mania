@@ -5,6 +5,24 @@ this.VelhaMania.module('BoardApp.Show', function (Show, App, Backbone, Marionett
         regions: {
             boardRegion: '.board-region',
             turnRegion: '.turn-region'
+        },
+
+        initialize: function () {
+            window.foo = this;
+        },
+
+        templateHelpers: function () {
+            // $(window).outerWidth(true)
+            // $(window).outerHeight(true)
+            return {
+                height: function () {
+                    return 380;
+                },
+
+                width: function () {
+                    return 380;
+                }
+            }
         }
     });
 
